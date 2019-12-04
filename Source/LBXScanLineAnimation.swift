@@ -13,7 +13,7 @@ class LBXScanLineAnimation: UIImageView {
     var isAnimationing = false
     var animationRect = CGRect.zero
     
-    func startAnimatingWithRect(animationRect: CGRect, parentView: UIView, image: UIImage?) {
+    public func startAnimatingWithRect(animationRect: CGRect, parentView: UIView, image: UIImage?) {
         self.image = image
         self.animationRect = animationRect
         parentView.addSubview(self)
@@ -49,7 +49,7 @@ class LBXScanLineAnimation: UIImageView {
         })
     }
     
-    func stopStepAnimating() {
+    public func stopStepAnimating() {
         isHidden = true
         isAnimationing = false
     }

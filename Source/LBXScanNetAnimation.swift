@@ -17,7 +17,7 @@ class LBXScanNetAnimation: UIImageView {
         return LBXScanNetAnimation()
     }
     
-    func startAnimatingWithRect(animationRect: CGRect, parentView: UIView, image: UIImage?) {
+    public func startAnimatingWithRect(animationRect: CGRect, parentView: UIView, image: UIImage?) {
         self.image = image
         self.animationRect = animationRect
         parentView.addSubview(self)
@@ -61,7 +61,7 @@ class LBXScanNetAnimation: UIImageView {
         })
     }
 
-    func stopStepAnimating() {
+    public func stopStepAnimating() {
         isHidden = true
         isAnimationing = false
     }
