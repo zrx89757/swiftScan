@@ -88,7 +88,7 @@ open class LBXScanView: UIView {
     
     
     // 开始扫描动画
-    func startScanAnimation() {
+    public func startScanAnimation() {
         guard !isAnimationing else {
             return
         }
@@ -266,7 +266,7 @@ open class LBXScanView: UIView {
     }
     
     // 根据矩形区域，获取识别区域
-    static func getScanRectWithPreView(preView: UIView, style: LBXScanViewStyle) -> CGRect {
+    public static func getScanRectWithPreView(preView: UIView, style: LBXScanViewStyle) -> CGRect {
         let XRetangleLeft = style.xScanRetangleOffset
         let width = preView.frame.size.width - XRetangleLeft * 2
         let height = width
@@ -327,7 +327,7 @@ open class LBXScanView: UIView {
         return sizeRetangle
     }
     
-    func deviceStartReadying(readyStr: String) {
+    public func deviceStartReadying(readyStr: String) {
         let XRetangleLeft = viewStyle.xScanRetangleOffset
         let sizeRetangle = getRetangeSize()
 
@@ -359,7 +359,7 @@ open class LBXScanView: UIView {
         activityView?.startAnimating()
     }
     
-    func deviceStopReadying() {
+    public func deviceStopReadying() {
         if activityView != nil {
             activityView?.stopAnimating()
             activityView?.removeFromSuperview()
