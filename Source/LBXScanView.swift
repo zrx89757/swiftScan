@@ -119,7 +119,7 @@ open class LBXScanView: UIView {
     }
     
     // 开始扫描动画
-    func stopScanAnimation() {
+    public func stopScanAnimation() {
         isAnimationing = false
         switch viewStyle.anmiationStyle {
         case .LineMove:
