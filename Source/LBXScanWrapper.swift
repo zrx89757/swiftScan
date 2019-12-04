@@ -64,7 +64,7 @@ open class LBXScanWrapper: NSObject,AVCaptureMetadataOutputObjectsDelegate {
      - parameter success:      返回识别信息
      - returns:
      */
-    init(videoPreView: UIView,
+    public init(videoPreView: UIView,
          objType: [AVMetadataObject.ObjectType] = [(AVMetadataObject.ObjectType.qr as NSString) as AVMetadataObject.ObjectType],
          isCaptureImg: Bool,
          cropRect: CGRect = .zero,
